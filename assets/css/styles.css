@@ -1,0 +1,28 @@
+
+/* OUR OWN CLASSES */
+.background-container{
+    background-color: #A9D3FD ;
+}
+
+.background-graydark{
+    background-color: #4D6073;
+}
+
+.graydark-color{
+    color: #4D6073;
+}
+
+.my-border-color{
+    border-color: #F1F5F9;
+}
+
+.box-shadow-graydark{
+    box-shadow: #4D6073;
+}
+
+input[type="text"],
+input[type="email"]
+{
+    padding-left: 0.313rem; 
+    outline: none;
+}
