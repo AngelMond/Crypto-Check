@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="flex flex-wrap justify-center items-center bg-slate-100 graydark-color" >
 
     
         <!--Container for header, main and footer-->
         <div id="container" class="w-9/12 flex flex-col flex-wrap background-container p-5 border-2 border-slate-300 shadow-2xl shadow-slate-400 rounded-lg 
+        sm: w-11/12
+        sm:p-2
+        sm:p-2
         lg:w-11/12" >
             
             <!--Header-->
@@ -27,34 +31,41 @@
         
             
             <!--Main content-->
-            <main class="w-full flex flex-row flex-wrap justify-center">
+            <main class="w-full flex flex-row flex-wrap justify-center
+            sm:w-full">
               
                 <!--First Section-->
                 <section class="m-2.5 basis-5/12 text-center p-4 border-2 my-border-color rounded-lg shadow-2xl box-shadow-graydark
-                ">
+                sm:basis-11/12
+                lg:basis-5/12">
+                
                     
                     <h2 class="basis-full  text-center font-sans text-xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the today's value of your invest</h2>
 
                     <!--Form to check the price-->
-                    <form action="" class="flex flex-row flex-wrap">
-                        <label for="select" class="basis-6/12 mb-2.5">Select your Crypto</label>
+                    <form action="" class="flex flex-row flex-wrap basis-full">
+                        <label for="select" class="basis-6/12 mb-2.5 text-right pr-1.5 lg:basis-5/12">Select your Crypto</label>
 
-                        <!--Codigo del dropdown-->
-                        <select name="selectCrypto" id="selectCrypto" class="basis-6/12 mb-2.5">\
+                        <!--Dropdown Cryptos-->
+                        <select name="selectCrypto" id="selectCrypto" class="basis-6/12 mb-2.5 rounded lg:basis-5/12">\
                             
                             
                         </select>
 
-                        <span id="currentPrice" class="basis-8/12 mb-2.5 ">Current price in USD $</span>
+                        <span  class=" basis-6/12 mb-2.5 text-right pr-1.5 lg:mt-3">Current price in USD $</span>
+
+                        <!--Here goes the code from the current price-->
+                        <span id="currentPrice" class="basis-6/12 text-left lg:mt-3"> Price</span>
 
 
-                        <label for="enterAmount" class="basis-6/12 mb-2.5">Enter the amount of your actual invest</label>
-                        <input type="text" placeholder="0.00" class="basis-6/12 mb-2.5">
+                        <label for="enterAmount" class="basis-6/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12">Enter the amount of your actual invest</label>
+                        <input type="text" placeholder="0.00" class="basis-6/12 mb-2.5 rounded lg:2/12">
 
-                        <span class="basis-6/12 mb-2.5 font-semibold">This is the value of your invest: </span>
+
+                        <span class="basis-6/12 mb-2.5 font-semibold lg:mt-3">This is the value of your invest: </span>
 
                         <!--This span will Display the users invest value-->
-                        <span id="investValue" class="basis-6/12 mb-2.5 font-semibold text-left">0.00</span>
+                        <span id="investValue" class="basis-6/12 mb-2.5 font-semibold text-left lg:mt-3">0.00</span>
                     </form>
 
 
@@ -67,26 +78,35 @@
 
                 <!--Second Section-->
                 <section class="m-2.5 basis-5/12 text-center p-4 border-2 my-border-color rounded-lg shadow-2xl box-shadow-graydark
-                ">
+                sm:basis-11/12
+                lg:basis-5/12">
 
                     <h2 class="basis-full  text-center font-sans text-xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Set an alert for a maximum or minimum price</h2>
 
                     <!--Form for alerts-->
-                    <form action="" class="flex flex-row flex-wrap ">
+                    <form action="" class="flex flex-row flex-wrap justify-center">
 
-                        <label for="selecCryptoAlert" class="basis-4/12">Select your Crypto</label>
-                        <select name="selectCrypto" id="selectCrypto" class="basis-6/12 mb-5">
+                        <label for="selecCryptoAlert" id="textSelectCrypto" class="basis-4/12 justify-self-start">Select your Crypto</label>
+                        <!--Dropdown Cryptos-->
+                        <select name="selectCrypto" id="selectCrypto" data-crypto=" select" class="basis-4/12 mb-5 rounded">
                             
                         </select>
 
-                        <label for="above" class="basis-3/12 mb-2.5 mr-1.5 text-center">Above:</label>
-                        <input type="text" placeholder="alert when price reaches a roof" class="basis-6/12 mb-2.5">
-                        
-                        <label for="under" class="basis-3/12 mb-2.5 mr-1.5 text-center">Under:</label>
-                        <input type="text" placeholder="alert when price reaches a floor" class="basis-6/12 mb-2.5">
+                        <!--Button to add coin-->
+                        <input type="submit" id="addCoin" value="Add" class="basis-2/12 ml-1.5 rounded-lg mb-5">
 
-                        <label for="email" class="basis-3/12 mt-5 mb-1.5">Email:</label>
-                        <input type="email" id="" placeholder="We'll send you the alert to your email " class="basis-7/12 ">
+                        <!--Inputs to set alerts-->
+                        <label for="above" class="basis-3/12 mb-2.5 pr-1.5 text-right">Above:</label>
+                        <input type="text" placeholder="Alert when price reaches a maximum" class="basis-8/12 mb-2.5 rounded">
+                        
+                        <label for="under" class="basis-3/12 mb-2.5 pr-1.5 text-right">Under:</label>
+                        <input type="text" placeholder="Alert when price reaches a floor" class="basis-8/12 mb-2.5 rounded">
+
+                        <label for="email" class="basis-3/12 mt-5n pr-1.5 mb-1.5 text-right">Email:</label>
+                        <input type="email" id="" placeholder="We'll send you the alert to your email " class="basis-8/12 rounded">
+
+                        <!--Button to set alert-->
+                        <input type="submit" id="sendButton" value="set alert" class="basis-3/12 mt-3 rounded-lg justify-self-center">
                     </form>
                 </section>
             </main>
@@ -94,7 +114,7 @@
         
             <!--Footer-->
             <footer class="flex flex-row flex-wrap justify-center mt-12">    
-                <div class="basis-1/4 p-4 border-t-2 border-slate-100 text-center font-sans text-xl font-semibold">Designed by BesTEAM </div>
+                <div class="basis-1/4 p-4 border-t-2 border-slate-100 text-center font-sans text-xl font-semibold sm:basis-1/2">Designed by BesTEAM </div>
             </footer>
         </div>
 

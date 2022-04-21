@@ -4,7 +4,7 @@
     background-color: #A9D3FD ;
 }
 
-.background-graydark{
+.bg-my-graydark{
     background-color: #4D6073;
 }
 
@@ -25,4 +25,23 @@ input[type="email"]
 {
     padding-left: 0.313rem; 
     outline: none;
+}
+
+#sendButton,
+#addCoin{
+    background-color: whitesmoke ;
+    border: 1px solid;
+    border-color: #7D9BBA;
+    transition: 100ms;
+    color: #7D9BBA;
+}
+
+#sendButton:hover,
+#addCoin:hover{
+    border: 2px solid #7D9BBA ;
+}
+
+#sendButton:active,
+#addCoin:active{
+    box-shadow: 0px 0px 5px  #59A4F0 inset;
 }
