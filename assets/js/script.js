@@ -8,7 +8,7 @@ const selectCrypto = $('#selectCrypto');
 //Select tag to display the current crypto value
 let currentPrice = $('#currentPrice');
 
-let option = $('option');
+
 
 
 
@@ -33,14 +33,13 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
         selectCrypto.append(optionElement);
 
         
-        
-        
     });
 
     selectCrypto.change(function(){
         var valores = selectCrypto.val();
-
-        currentPrice.append(valores)
+        
+        currentPrice.html('');
+        currentPrice.append(valores);
         
     })
 
