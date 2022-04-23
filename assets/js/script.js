@@ -31,10 +31,10 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
         
         //Append option tag with every crypto name
         selectCrypto.append(optionElement);
-// <<<<<<< HEAD
+<<<<<<< HEAD
 
-// =======
-// >>>>>>> f8d0f93c89cbcf2b7a93e23f1cc014751d4cb47c
+=======
+>>>>>>> f8d0f93c89cbcf2b7a93e23f1cc014751d4cb47c
         
     });
 
