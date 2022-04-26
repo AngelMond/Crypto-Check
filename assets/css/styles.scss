@@ -49,10 +49,67 @@
     box-shadow: 0px 0px 5px  #59A4F0 inset;
   }
   
-  
+@media(max-width:1081px){
+    #section1{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+    
+    #section2{
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media(max-width:1023px){
+
+    #coinValueForm{
+        justify-content: center;
+    }
+
+    #cryptoSelectHeader{
+        flex-basis: 30%;
+        margin-right: 5px;
+    }
+
+    #headerCurrentPrice{
+        flex-basis: 30%;
+        margin-right: 5px;
+    }
+
+    #enterAmountHeader{
+        flex-basis: 30%;
+        margin-right: 5px;
+    }
+
+    #headerInvestValue{
+        flex-basis: 30%;
+        margin-right: 5px;
+    }
+
+    #selectCrypto{
+        flex-basis: 45%;
+    }
+
+    #currentPrice{
+        flex-basis: 45%;
+    }
+
+    #userAmount{
+        flex-basis: 45%;
+    }
+
+    #investValue{
+        flex-basis: 45%;
+    }
+}
 
 
 @media(max-width:639px){
+
     #section1{
         flex-basis: 100%;
         margin-bottom: 50px;
@@ -64,6 +121,43 @@
         margin-bottom: 40px;
     }
 
+
+    #cryptoSelectHeader{
+        flex-basis: 40%;
+        margin-right: 5px;
+    }
+
+    #headerCurrentPrice{
+        flex-basis: 40%;
+        margin-right: 5px;
+    }
+
+    #enterAmountHeader{
+        flex-basis: 40%;
+        margin-right: 5px;
+    }
+
+    #headerInvestValue{
+        flex-basis: 40%;
+        margin-right: 5px;
+    }
+
+    #selectCrypto{
+        flex-basis: 45%;
+    }
+
+    #currentPrice{
+        flex-basis: 45%;
+    }
+
+    #userAmount{
+        flex-basis: 45%;
+    }
+
+    #investValue{
+        flex-basis: 45%;
+    }
+
     footer{
         flex-basis: 100%;
     }
@@ -71,9 +165,6 @@
     #footerDiv{
         flex-basis: 70%;
     }
-
-
-   
 }
 
 
@@ -92,6 +183,11 @@
 
     #section1{
         justify-content: center;
+    }
+
+    #cryptoSelectHeader{
+        flex-basis: 100%;
+        text-align: center;
     }
     
     .label{
@@ -195,4 +291,8 @@
 
 
 
+  /*
   
+  
+  
+  */

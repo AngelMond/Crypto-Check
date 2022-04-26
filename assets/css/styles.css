@@ -51,6 +51,64 @@ input[type="email"] {
           box-shadow: 0px 0px 5px  #59A4F0 inset;
 }
 
+@media (max-width: 1081px) {
+  #section1 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+  #section2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  #coinValueForm {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #cryptoSelectHeader {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 5px;
+  }
+  #headerCurrentPrice {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 5px;
+  }
+  #enterAmountHeader {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 5px;
+  }
+  #headerInvestValue {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 5px;
+  }
+  #selectCrypto {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #currentPrice {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #userAmount {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #investValue {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+}
+
 @media (max-width: 639px) {
   #section1 {
     -ms-flex-preferred-size: 100%;
@@ -62,6 +120,42 @@ input[type="email"] {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 40px;
+  }
+  #cryptoSelectHeader {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 5px;
+  }
+  #headerCurrentPrice {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 5px;
+  }
+  #enterAmountHeader {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 5px;
+  }
+  #headerInvestValue {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 5px;
+  }
+  #selectCrypto {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #currentPrice {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #userAmount {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #investValue {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
   }
   footer {
     -ms-flex-preferred-size: 100%;
@@ -85,6 +179,11 @@ input[type="email"] {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #cryptoSelectHeader {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
   }
   .label {
     -ms-flex-preferred-size: 100%;
@@ -183,4 +282,10 @@ input[type="email"] {
         flex-basis: 30%;
   }
 }
+
+/*
+  
+  
+  
+  */
 /*# sourceMappingURL=styles.css.map */
