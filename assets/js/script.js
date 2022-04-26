@@ -1,27 +1,35 @@
-fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-.then(res => res.json())
-.then(data =>console.log(data))
-
 //Select Tag to append option tag's
 const selectCrypto = $('#selectCrypto');
+const selectCryptoAlert = $('#selectCryptoAlert');
 
 //Select tag to display the current crypto value
 let currentPrice = $('#currentPrice');
 var valores = 0;
 
-var userQuantityComponent = $('#userAmount');
-var userQuantity = userQuantityComponent.val();
-
-
 function totalValue (){
+    if ($('#userAmount').val() >= 0){
     var investValue = $('#investValue');
     var prueba = $('#userAmount').val();
-    console.log(prueba);
     investValue.html('$');
     investValue.append(prueba*valores);
-    // console.log(prueba*valores);
+} else {
+    var investValue = $('#investValue');
+    var prueba = $('#userAmount').val();
+    alert ("Por favor ingrese un valor mayor a 0");
+    investValue.html('$');
+    investValue.append(0*valores);
+    }
 };
 
+
+function displayValue (){
+    selectCrypto.change(function(){
+        valores = selectCrypto.val();
+        currentPrice.html('$');
+        currentPrice.append(valores);
+        totalValue();
+    });
+};
 
 
 fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
@@ -29,35 +37,26 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 
 .then(data => {
 
-    
     data.forEach(token => {
-        // var option = $('<option class="coins" value=" ' + token.current_price+ '">'  + token.name +'</option>');
-
+       
         var optionElement = $('<option>');
-
         optionElement.html(token.name);
-
-        optionElement.addClass('coins');
-
         optionElement.attr( 'value', token.current_price);
         
         //Append option tag with every crypto name
         selectCrypto.append(optionElement);
-        
     });
 
-    selectCrypto.change(function(){
-        valores = selectCrypto.val();
-        
-        currentPrice.html('$');
-        currentPrice.append(valores);
-        totalValue();
-    })
+    data.forEach(token => {
 
+        var optionElement = $('<option>');
+        optionElement.html(token.name);
+        selectCryptoAlert.append(optionElement);
 
-    
-    //console.log(data)
+    });
 
+    displayValue ();
+  
 })
-.catch(err => console.log(err))
+.catch(err => console.log(err));
 

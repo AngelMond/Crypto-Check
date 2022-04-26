@@ -35,8 +35,8 @@ input[type="email"] {
   background-color: whitesmoke;
   border: 1px solid;
   border-color: #7D9BBA;
-  -webkit-transition: 100ms;
-  transition: 100ms;
+  /* -webkit-transition: 100ms;
+  transition: 100ms; */
   color: #7D9BBA;
 }
 
