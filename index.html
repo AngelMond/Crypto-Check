@@ -36,29 +36,29 @@
                 lg:basis-5/12">
                 
                     
-                    <h2 class="basis-full  text-center font-sans text-xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the today's value of your invest</h2>
+                    <h2 class="basis-full  text-center font-sans text-2xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the today's value of your invest</h2>
 
                     <!--Form to check the price-->
                     <form action="" class="flex flex-row flex-wrap basis-full">
-                        <label for="select" class="basis-6/12 mb-2.5 text-right pr-1.5 lg:basis-5/12">Select your Crypto</label>
+                        <label for="select" class="basis-6/12 mb-2.5 text-center pr-1.5 lg:basis-5/12 font-semibold ">Select your Crypto</label>
                         <!--Dropdown Cryptos-->
-                        <select name="selectCrypto" id="selectCrypto"  class="basis-6/12 mb-2.5 rounded lg:basis-5/12">\
+                        <select name="selectCrypto" id="selectCrypto"  class="basis-6/12 mb-2.5 rounded lg:basis-5/12 text-center">\
                         <option value=" ">Crypto</option>
                             
                         </select>
 
-                        <span  class=" basis-6/12 mb-2.5 text-right pr-1.5 lg:mt-3">Current price in USD $</span>
+                        <span  class=" basis-5/12 mb-2.5 text-center pr-1.5 lg:mt-3 font-semibold">Current price in USD $</span>
                         <!--Here goes the code from the cryptos current price-->
-                        <span id="currentPrice" class="basis-6/12 text-left lg:mt-3"> </span>
+                        <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center"> 0.00 </span>
 
                         <!--Enter users invest-->
-                        <label for="enterAmount" class="basis-6/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12">Enter the amount of your actual crypto coins</label>
-                        <input type="text" placeholder="0.00" class="basis-6/12 mb-2.5 rounded lg:2/12">
+                        <label for="enterAmount" class="basis-5/12 mb-2.5 text-center pr-1.5 lg:mt-3 lg:basis-5/12 font-semibold">Enter the amount of your actual crypto coins</label>
+                        <input id="userAmount" type="number" value="0" class=" text-center basis-5/12 mb-2.5 rounded lg:2/12">
 
 
-                        <span class="basis-6/12 mb-2.5 font-semibold lg:mt-3">This is the value of your invest: </span>
+                        <span class="basis-5/12 mb-2.5 font-semibold lg:mt-3">This is the value of your invest in USD: </span>
                         <!--This span will Display the users invest value-->
-                        <span id="investValue" class="basis-6/12 mb-2.5 font-semibold text-left lg:mt-3">0.00</span>
+                        <span id="investValue" class="basis-5/12 mb-2.5 font-semibold text-left lg:mt-3 text-center">0.00</span>
                     </form>
 
 
