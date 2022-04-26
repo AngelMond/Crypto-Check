@@ -7,8 +7,20 @@ const selectCrypto = $('#selectCrypto');
 
 //Select tag to display the current crypto value
 let currentPrice = $('#currentPrice');
+var valores = 0;
+
+var userQuantityComponent = $('#userAmount');
+var userQuantity = userQuantityComponent.val();
 
 
+function totalValue (){
+    var investValue = $('#investValue');
+    var prueba = $('#userAmount').val();
+    console.log(prueba);
+    investValue.html('$');
+    investValue.append(prueba*valores);
+    // console.log(prueba*valores);
+};
 
 
 
@@ -27,7 +39,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 
         optionElement.addClass('coins');
 
-        optionElement.attr('value', token.current_price);
+        optionElement.attr( 'value', token.current_price);
         
         //Append option tag with every crypto name
         selectCrypto.append(optionElement);
@@ -35,11 +47,11 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
     });
 
     selectCrypto.change(function(){
-        var valores = selectCrypto.val();
+        valores = selectCrypto.val();
         
-        currentPrice.html('');
+        currentPrice.html('$');
         currentPrice.append(valores);
-        
+        totalValue();
     })
 
 
