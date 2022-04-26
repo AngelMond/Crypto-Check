@@ -1,0 +1,198 @@
+/* OUR OWN CLASSES */
+
+.color-rojo{
+    color: var(color-letra);
+}
+.background-container{
+    background-color: #A9D3FD ;
+  }
+  
+  .bg-my-graydark{
+    background-color: #4D6073;
+  }
+  
+  .graydark-color{
+    color: #4D6073;
+  }
+  
+  .my-border-color{
+    border-color: #F1F5F9;
+  }
+  
+  .box-shadow-graydark{
+    box-shadow: #4D6073;
+  }
+  
+  input[type="text"],
+  input[type="email"]
+  {
+    padding-left: 0.313rem; 
+    outline: none;
+  }
+  
+  #sendButton,
+  #addCoin{
+    background-color: whitesmoke ;
+    border: 1px solid;
+    border-color: #7D9BBA;
+    transition: 100ms;
+    color: #7D9BBA;
+  }
+  
+  #sendButton:hover,
+  #addCoin:hover{
+    border: 2px solid #7D9BBA ;
+  }
+  
+  #sendButton:active,
+  #addCoin:active{
+    box-shadow: 0px 0px 5px  #59A4F0 inset;
+  }
+  
+  
+
+
+@media(max-width:639px){
+    #section1{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+    
+    #section2{
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+
+    footer{
+        flex-basis: 100%;
+    }
+
+    #footerDiv{
+        flex-basis: 70%;
+    }
+
+
+   
+}
+
+
+
+@media(max-width:545px){
+
+
+    /* STYLES FOR SECTION 1*/
+    #h2Section1{
+        font-size: 23px;
+    }
+
+    #h2Section2{
+        font-size: 23px;
+    }
+
+    #section1{
+        justify-content: center;
+    }
+    
+    .label{
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    #currentPrice{
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #headerCurrentPrice{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #selectCrypto{
+        flex-basis: 70%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    #enterAmountHeader{
+        flex-basis: 100%;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    input[type="text"]{
+        margin: 0 auto;
+        flex-basis: 70%;
+    }
+
+    #headerInvestValue{
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+
+    #investValue{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+
+    /* STYLES FOR SECTION 2*/
+    #textSelectCrypto{
+        flex-basis: 100%;
+        margin-bottom:10px;
+    }
+
+    #selectCrypto2{
+        flex-basis: 80%;
+    }
+
+    #addCoin{
+        flex-basis: 30%;
+    }
+
+    #containerAddedCoin{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #textAlertAbove{
+        flex-basis: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #inputPriceAbove{
+        flex-basis: 80%;
+        margin-bottom: 15px;
+    }
+
+    #textAlertUnder{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #inputPriceUnder{
+        flex-basis: 80%;
+        margin-bottom: 15px;
+    }
+
+    #textEmail{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #inputEmail{
+        flex-basis: 80%;
+    }
+
+    #sendButton{
+        flex-basis: 30%;
+    }
+   
+}
+
+
+
+  

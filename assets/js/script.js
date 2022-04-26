@@ -49,11 +49,3 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 })
 .catch(err => console.log(err))
 
-//Select every option tag 
-
-let coins = $('.coins');
-    coins.on('click', function(){
-
-        console.log("hola");
-
-});

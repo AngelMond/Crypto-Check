@@ -1,47 +1,186 @@
-
 /* OUR OWN CLASSES */
-.background-container{
-    background-color: #A9D3FD ;
+.color-rojo {
+  color: var(color-letra);
 }
 
-.bg-my-graydark{
-    background-color: #4D6073;
+.background-container {
+  background-color: #A9D3FD;
 }
 
-.graydark-color{
-    color: #4D6073;
+.bg-my-graydark {
+  background-color: #4D6073;
 }
 
-.my-border-color{
-    border-color: #F1F5F9;
+.graydark-color {
+  color: #4D6073;
 }
 
-.box-shadow-graydark{
-    box-shadow: #4D6073;
+.my-border-color {
+  border-color: #F1F5F9;
+}
+
+.box-shadow-graydark {
+  -webkit-box-shadow: #4D6073;
+          box-shadow: #4D6073;
 }
 
 input[type="text"],
-input[type="email"]
-{
-    padding-left: 0.313rem; 
-    outline: none;
+input[type="email"] {
+  padding-left: 0.313rem;
+  outline: none;
 }
 
 #sendButton,
-#addCoin{
-    background-color: whitesmoke ;
-    border: 1px solid;
-    border-color: #7D9BBA;
-    transition: 100ms;
-    color: #7D9BBA;
+#addCoin {
+  background-color: whitesmoke;
+  border: 1px solid;
+  border-color: #7D9BBA;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+  color: #7D9BBA;
 }
 
 #sendButton:hover,
-#addCoin:hover{
-    border: 2px solid #7D9BBA ;
+#addCoin:hover {
+  border: 2px solid #7D9BBA;
 }
 
 #sendButton:active,
-#addCoin:active{
-    box-shadow: 0px 0px 5px  #59A4F0 inset;
+#addCoin:active {
+  -webkit-box-shadow: 0px 0px 5px  #59A4F0 inset;
+          box-shadow: 0px 0px 5px  #59A4F0 inset;
 }
+
+@media (max-width: 639px) {
+  #section1 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+  #section2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 40px;
+  }
+  footer {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  #footerDiv {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
+@media (max-width: 545px) {
+  /* STYLES FOR SECTION 1*/
+  #h2Section1 {
+    font-size: 23px;
+  }
+  #h2Section2 {
+    font-size: 23px;
+  }
+  #section1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .label {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  #currentPrice {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #headerCurrentPrice {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  #selectCrypto {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  #enterAmountHeader {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 35px;
+    text-align: center;
+  }
+  input[type="text"] {
+    margin: 0 auto;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  #headerInvestValue {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 10px;
+  }
+  #investValue {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  /* STYLES FOR SECTION 2*/
+  #textSelectCrypto {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  #selectCrypto2 {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+  #addCoin {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  #containerAddedCoin {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  #textAlertAbove {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  #inputPriceAbove {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    margin-bottom: 15px;
+  }
+  #textAlertUnder {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  #inputPriceUnder {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    margin-bottom: 15px;
+  }
+  #textEmail {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  #inputEmail {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+  #sendButton {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
