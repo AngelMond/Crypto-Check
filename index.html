@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Proyect</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
        
 </head>
@@ -41,28 +41,29 @@
 
                     <!--Form to check the price-->
                     <form id="coinValueForm" class="flex flex-row flex-wrap basis-full">
-                        <label class="label" for="select" class="basis-6/12 mb-2.5 text-right pr-1.5 lg:basis-5/12">Select your Crypto</label>
+
                         
+                        <label class="mb-2.5 lg:basis-5/12 text-right pr-1 " >Select your crypto</label>
                         <!--Dropdown Cryptos-->
-                        <select name="selectCrypto" id="selectCrypto"  class="basis-6/12 mb-2.5 rounded lg:basis-5/12 text-center">\
+                        <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4">\
                         <option value=" ">Crypto</option>
                             
                         </select>
 
-                        <span id="headerCurrentPrice"  class=" basis-6/12 mb-2.5 text-right pr-1.5 lg:mt-3">Current price in USD</span>
+                        <span id="headerCurrentPrice"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 ">Current price in USD</span>
                         
                         <!--Here goes the code from the cryptos current price-->
-                        <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center"> 0.00 </span>
+                        <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4"> 0.00 </span>
 
                         <!--Enter users invest-->
-                        <label id="enterAmountHeader" for="enterAmount" class="basis-6/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12">Enter the amount of your actual crypto coins</label>
-                        <input type="text" placeholder="0.00" class="basis-6/12 mb-2.5 rounded lg:2/12">
+                        <label id="enterAmountHeader" for="enterAmount" class="basis-5/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12 lg:mr-2">Enter the amount of your actual crypto coins</label>
+                        <input id="userAmount" type="number" placeholder="0.00" class=" text-center basis-5/12 mb-2.5 rounded lg:2/12 lg:ml-2 lg:mt-3">
 
 
-                        <span id="headerInvestValue" class="basis-6/12 mb-2.5 font-semibold lg:mt-3">This is the value of your invest: </span>
+                        <span id="headerInvestValue" class="basis-5/12 mb-2.5 font-semibold lg:mt-3 ">This is the value of your invest: </span>
                         
                         <!--This span will Display the users invest value-->
-                        <span id="investValue" class="basis-5/12 mb-2.5 font-semibold text-left lg:mt-3 text-center">0.00</span>
+                        <span id="investValue" class="basis-5/12 mb-2.5 font-semibold text-left lg:mt-3 text-center  lg:ml-4 ">0.00</span>
                     </form>
 
 
@@ -119,7 +120,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
-    <script src="js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
 
