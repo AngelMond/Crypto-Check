@@ -1,4 +1,13 @@
+:root{
+    --font-color-bluedark: #264666;
+}
+
 /* OUR OWN CLASSES */
+
+
+.font-color-bluedark{
+    color: var(--font-color-bluedark);
+}
 
 .color-rojo{
     color: var(color-letra);
@@ -146,6 +155,7 @@
         margin-right: 5px;
     }
 
+    //no se carga css 
     #headerCurrentPriceMxn{
         flex-basis: 40%;
         margin-right: 5px;
@@ -166,6 +176,11 @@
     }
 
     #currentPrice{
+        flex-basis: 45%;
+    }
+
+    
+    #currentPriceMxn{
         flex-basis: 45%;
     }
 
@@ -230,6 +245,12 @@
         flex-basis: 100%;
         text-align: center;
     }
+
+    #headerCurrentPriceMxn{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
 
     #selectCrypto{
         flex-basis: 70%;

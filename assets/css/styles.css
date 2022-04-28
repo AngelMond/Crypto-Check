@@ -1,4 +1,12 @@
+:root {
+  --font-color-bluedark: #264666;
+}
+
 /* OUR OWN CLASSES */
+.font-color-bluedark {
+  color: var(--font-color-bluedark);
+}
+
 .color-rojo {
   color: var(color-letra);
 }
@@ -35,8 +43,8 @@ input[type="email"] {
   background-color: whitesmoke;
   border: 1px solid;
   border-color: #7D9BBA;
-  /* -webkit-transition: 100ms;
-  transition: 100ms; */
+  -webkit-transition: 100ms;
+  transition: 100ms;
   color: #7D9BBA;
 }
 
@@ -49,6 +57,11 @@ input[type="email"] {
 #addCoin:active {
   -webkit-box-shadow: 0px 0px 5px  #59A4F0 inset;
           box-shadow: 0px 0px 5px  #59A4F0 inset;
+}
+
+#textSelectCrypto {
+  color: #4D6073;
+  font-weight: 500;
 }
 
 @media (max-width: 1081px) {
@@ -81,6 +94,11 @@ input[type="email"] {
         flex-basis: 30%;
     margin-right: 5px;
   }
+  #headerCurrentPriceMxn {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 5px;
+  }
   #enterAmountHeader {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
@@ -92,6 +110,10 @@ input[type="email"] {
     margin-right: 5px;
   }
   #selectCrypto {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #currentPriceMxn {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
   }
@@ -131,6 +153,11 @@ input[type="email"] {
         flex-basis: 40%;
     margin-right: 5px;
   }
+  #headerCurrentPriceMxn {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 5px;
+  }
   #enterAmountHeader {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
@@ -146,6 +173,10 @@ input[type="email"] {
         flex-basis: 45%;
   }
   #currentPrice {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  #currentPriceMxn {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
   }
@@ -196,7 +227,18 @@ input[type="email"] {
     margin: 0 auto;
     text-align: center;
   }
+  #currentPriceMxn {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
   #headerCurrentPrice {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  #headerCurrentPriceMxn {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     text-align: center;

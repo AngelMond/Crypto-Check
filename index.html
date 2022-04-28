@@ -22,7 +22,7 @@
         lg:w-11/12" >
             
             <!--Header-->
-            <header class="flex flex-row flex-wrap justify-center mb-8 w-12/12">
+            <header class="flex flex-row flex-wrap justify-center mb-8 mt-9 p-3 w-12/12">
                 <h1 class="basis-full text-center text-6xl font-sans font-semibold"> Crypto Check </h1>
             </header>
         
@@ -43,31 +43,31 @@
                     <form id="coinValueForm" class="flex flex-row flex-wrap basis-full">
 
                         
-                        <label id="cryptoSelectHeader" class="mb-2.5 lg:basis-5/12 text-right pr-1  " >Select your crypto</label>
+                        <label id="cryptoSelectHeader" class="mb-2.5 lg:basis-5/12 text-right pr-1 font-color-bluedark " >Select your crypto</label>
                         <!--Dropdown Cryptos-->
                         <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4">\
                         <option value=" ">Crypto</option>
                             
                         </select>
 
-                        <span id="headerCurrentPrice"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-semibold ">Current price in USD</span>
+                        <span id="headerCurrentPrice"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-color-bluedark ">Current price in USD</span>
                         
                         <!--Here goes the code from the cryptos current price-->
                         <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> $0.00 </span>
 
 
                         <!--Display price in mexican pesos-->
-                        <span id="headerCurrentPriceMxn"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-semibold ">Current price in MXN</span>
+                        <span id="headerCurrentPriceMxn"  class="mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-color-bluedark">Current price in MXN</span>
                         
                         <!-- Append to this span-->
                         <span id="currentPriceMxn" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> $0.00 </span>
 
                         <!--Enter users invest-->
-                        <label id="enterAmountHeader" for="enterAmount" class=" font-semibold basis-5/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12 lg:mr-2">Enter the amount of your actual crypto coins</label>
+                        <label id="enterAmountHeader" for="enterAmount" class=" basis-5/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12 lg:mr-2 font-color-bluedark">Enter the amount of your actual crypto coins</label>
                         <input id="userAmount" type="number" placeholder="0.00" class=" text-center basis-5/12 mb-2.5 rounded lg:2/12 lg:ml-2 lg:mt-3">
 
 
-                        <span id="headerInvestValue" class="basis-6/12 mb-2.5 font-semibold lg:mt-3 ">This is the value of your invest: </span>
+                        <span id="headerInvestValue" class="basis-6/12 mb-2.5 lg:mt-3 font-color-bluedark">This is the value of your invest: </span>
                         
                         <!--This span will Display the users invest value-->
                         <span id="investValue" class="basis-3/12 mb-2.5 font-semibold text-left lg:mt-3 text-center  lg:ml-4 ">$0.00</span>
@@ -90,7 +90,7 @@
                     <!--Form for alerts-->
                     <form action="" class="flex flex-row flex-wrap justify-center">
 
-                        <label for="selectCrypto" id="textSelectCrypto" class="basis-4/12 justify-self-start ">Select your Crypto</label>
+                        <label for="selectCrypto" id="textSelectCrypto" class="basis-4/12 justify-self-start font-color-bluedark">Select your Crypto</label>
 
                         <!--Dropdown Cryptos-->
                         <select name="selectCrypto" id="selectCryptoAlert" class="basis-4/12 mb-3 rounded"></select>
@@ -100,16 +100,16 @@
                         <input type="submit" id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 rounded-lg mb-3">
 
                         <!--Display the coin added-->
-                        <div id="containerAddedCoin" class="basis-10/12 mb-3 text-left pl-10 font-semibold">Cryptos added:  <span id="addedCrypto"></span></div>
+                        <div id="containerAddedCoin" class="basis-10/12 mb-3 text-left pl-10 font-color-bluedark">Cryptos added:  <span id="addedCrypto"></span></div>
 
                         <!--Inputs to set alerts-->
-                        <label for="above" id="textAlertAbove" class="basis-3/12 mb-2.5 pr-1.5 text-right font-semibold ">Above:</label>
+                        <label for="above" id="textAlertAbove" class="basis-3/12 mb-2.5 pr-1.5 text-right font-color-bluedark ">Above:</label>
                         <input type="text" id="inputPriceAbove" placeholder="Price above than" class="basis-8/12 mb-2.5 rounded">
                         
-                        <label for="under" id="textAlertUnder" class="basis-3/12 mb-2.5 pr-1.5 text-right font-semibold">Under:</label>
+                        <label for="under" id="textAlertUnder" class="basis-3/12 mb-2.5 pr-1.5 text-right font-color-bluedark">Under:</label>
                         <input type="text" id="inputPriceUnder" placeholder="Price under than" class="basis-8/12 mb-2.5 rounded">
 
-                        <label for="email" id="textEmail" class="basis-3/12 mt-5n pr-1.5 mb-1.5 text-right font-semibold">Email:</label>
+                        <label for="email" id="textEmail" class="basis-3/12 mt-5n pr-1.5 mb-1.5 text-right font-color-bluedark">Email:</label>
                         <input type="email" id="inputEmail" placeholder="Your email " class="basis-8/12 rounded  ">
 
                         <!--Button to set alert-->
@@ -125,7 +125,7 @@
                             <!-- Modal header -->
                             <div class="basis-12/12 flex flex-wrap flex-row p-4 border-b rounded-t dark:border-gray-600">
                                 <h3 class="text-xl font-semibold text-center text-gray-900 dark:text-white">
-                                    Please enter values above 0
+                                    please enter a number greater than "0"
                                 </h3>
                             </div>
                             
