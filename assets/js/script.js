@@ -46,6 +46,7 @@ var exchangeValue = getCurrency()
         //Select span to append the mexican pesos 
         let mexicanPesos = $('#currentPriceMxn');
         var valoredPesosDolares = mexicanPesosToDollars;
+        mexicanPesos.html('$');
         mexicanPesos.append(valoredPesosDolares);
 
 
