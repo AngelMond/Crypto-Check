@@ -6,20 +6,34 @@ const selectCryptoAlert = $('#selectCryptoAlert');
 let currentPrice = $('#currentPrice');
 var valores = 0;
 
-function totalValue (){
-    if ($('#userAmount').val() >= 0){
-    var investValue = $('#investValue');
-    var prueba = $('#userAmount').val();
-    investValue.html('$');
-    investValue.append(prueba*valores);
-} else {
-    var investValue = $('#investValue');
-    var prueba = $('#userAmount').val();
-    alert ("Por favor ingrese un valor mayor a 0");
-    investValue.html('$');
-    investValue.append(0*valores);
-    }
-};
+
+var userAmount = $('#userAmount');
+
+userAmount.on('keyup', () => {
+
+    function totalValue (){
+        if ($('#userAmount').val() >= 0){
+        var investValue = $('#investValue');
+        var prueba = $('#userAmount').val();
+        investValue.html('$');
+        investValue.append(prueba*valores);
+    } else {
+        var investValue = $('#investValue');
+        var prueba = $('#userAmount').val();
+        alert ("Por favor ingrese un valor mayor a 0");
+        investValue.html('$');
+        investValue.append(0*valores);
+        }
+    };
+
+    totalValue()
+
+})
+
+
+
+
+
 
 
 function displayValue (){
