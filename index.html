@@ -23,7 +23,7 @@
             
             <!--Header-->
             <header class="flex flex-row flex-wrap justify-center mb-8 w-12/12">
-                <h1 class="basis-full text-center text-5xl font-sans font-semibold"> Crypto Check </h1>
+                <h1 class="basis-full text-center text-6xl font-sans font-semibold"> Crypto Check </h1>
             </header>
         
             
@@ -37,13 +37,13 @@
                 lg:basis-5/12">
                 
                     
-                    <h2 id="h2Section1" class="basis-full  text-center font-sans text-2xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the current value of your invest</h2>
+                    <h2 id="h2Section1" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the current value of your invest</h2>
 
                     <!--Form to check the price-->
                     <form id="coinValueForm" class="flex flex-row flex-wrap basis-full">
 
                         
-                        <label id="cryptoSelectHeader" class="mb-2.5 lg:basis-5/12 text-right pr-1 font-semibold " >Select your crypto</label>
+                        <label id="cryptoSelectHeader" class="mb-2.5 lg:basis-5/12 text-right pr-1  " >Select your crypto</label>
                         <!--Dropdown Cryptos-->
                         <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4">\
                         <option value=" ">Crypto</option>
@@ -53,14 +53,14 @@
                         <span id="headerCurrentPrice"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-semibold ">Current price in USD</span>
                         
                         <!--Here goes the code from the cryptos current price-->
-                        <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> 0.00 </span>
+                        <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> $0.00 </span>
 
 
                         <!--Display price in mexican pesos-->
                         <span id="headerCurrentPriceMxn"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-semibold ">Current price in MXN</span>
                         
                         <!-- Append to this span-->
-                        <span id="currentPriceMxn" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> 0.00 </span>
+                        <span id="currentPriceMxn" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> $0.00 </span>
 
                         <!--Enter users invest-->
                         <label id="enterAmountHeader" for="enterAmount" class=" font-semibold basis-5/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12 lg:mr-2">Enter the amount of your actual crypto coins</label>
@@ -70,7 +70,7 @@
                         <span id="headerInvestValue" class="basis-6/12 mb-2.5 font-semibold lg:mt-3 ">This is the value of your invest: </span>
                         
                         <!--This span will Display the users invest value-->
-                        <span id="investValue" class="basis-3/12 mb-2.5 font-semibold text-left lg:mt-3 text-center  lg:ml-4 ">0.00</span>
+                        <span id="investValue" class="basis-3/12 mb-2.5 font-semibold text-left lg:mt-3 text-center  lg:ml-4 ">$0.00</span>
                     </form>
 
 
@@ -85,12 +85,12 @@
                 sm:basis-11/12
                 lg:basis-5/12">
 
-                    <h2 id="h2Section2" class="basis-full  text-center font-sans text-2xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Set an alert for a maximum or minimum price</h2>
+                    <h2 id="h2Section2" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Set an alert for a maximum or minimum price</h2>
 
                     <!--Form for alerts-->
                     <form action="" class="flex flex-row flex-wrap justify-center">
 
-                        <label for="selecCryptoAlert" id="textSelectCrypto" class="basis-4/12 justify-self-start font-semibold">Select your Crypto</label>
+                        <label for="selectCrypto" id="textSelectCrypto" class="basis-4/12 justify-self-start ">Select your Crypto</label>
 
                         <!--Dropdown Cryptos-->
                         <select name="selectCrypto" id="selectCryptoAlert" class="basis-4/12 mb-3 rounded"></select>
@@ -116,6 +116,28 @@
                         <input type="submit" id="sendButton" value="Set Alert" class="basis-3/12 mt-3 rounded-lg justify-self-center">
                     </form>
                 </section>
+
+                <!-- Main modal -->
+                <div id="defaultModal" tabindex="-1"  class="flex justify-center hidden flex-wrap fixed top-0 left-0  right-0 z-50  w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full max-w-2xl p-4 ">
+                        <!-- Modal content -->
+                        <div class="flex flex-col justify-center items-center relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="basis-12/12 flex flex-wrap flex-row p-4 border-b rounded-t dark:border-gray-600">
+                                <h3 class="text-xl font-semibold text-center text-gray-900 dark:text-white">
+                                    Please enter values above 0
+                                </h3>
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="basis-12/12 flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                <button id="modalButton" data-modal-toggle="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 tracking-widest">Ok!</button> 
+                            </div>
+                        </div>
+                    </div>
+             </div>
+                
+
             </main>
         
         
@@ -124,6 +146,15 @@
                 <div id="footerDiv" class="basis-1/4 p-4 border-t-2 border-slate-100 text-center font-sans text-xl font-semibold sm:basis-1/2">Designed by BesTEAM </div>
             </footer>
         </div>
+
+
+
+
+
+        
+
+  
+  
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>

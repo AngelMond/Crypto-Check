@@ -6,40 +6,52 @@ const selectCryptoAlert = $('#selectCryptoAlert');
 let currentPrice = $('#currentPrice');
 var valores = 0;
 
+//Select the input to enter the user amount
+let userAmount = $('#userAmount');
 
-var userAmount = $('#userAmount');
+//Select the modal
+let modalForInvalidNumber = $('#defaultModal')
+
+//Select span to append the invest value
+let investValue = $('#investValue');
+
+//Select span to append the mexican pesos 
+let mexicanPesos = $('#currentPriceMxn');
+
+//Button to close the modal
+let modalButton = $('#modalButton');
 
 
 
 userAmount.on('keyup', () => {
 
-    function totalValue (){
-        if ($('#userAmount').val() >= 0){
-        var investValue = $('#investValue');
-        var prueba = $('#userAmount').val();
+        if (userAmount.val() >= 0){
+
+        var prueba = userAmount.val();
         investValue.html('$');
         investValue.append(prueba*valores);
+
     } else {
-        var investValue = $('#investValue');
-        var prueba = $('#userAmount').val();
-        alert ("Por favor ingrese un valor mayor a 0");
-        investValue.html('$');
-        investValue.append(0*valores);
+
+        modalForInvalidNumber.removeClass('hidden');
+        modalButton.on('click', ()=>{
+            modalForInvalidNumber.addClass('hidden');
+            userAmount.val('');
+        })
         }
-    };
-
-    totalValue()
-
+    
 })
 
 
-
+//This function is when the user select a crypto from the select tag
 function displayValue (){
+
     selectCrypto.change(function(){
+        userAmount.val('');
+        investValue.html('$0.00')
         valores = selectCrypto.val();
         currentPrice.html('$');
         currentPrice.append(valores);
-        totalValue();
     });
 };
 
@@ -64,6 +76,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
         var optionElement = $('<option>');
         optionElement.html(token.name);
         selectCryptoAlert.append(optionElement);
+        
 
     });
 
@@ -71,4 +84,6 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
   
 })
 .catch(err => console.log(err));
+
+
 
