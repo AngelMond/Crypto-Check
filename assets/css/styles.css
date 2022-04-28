@@ -12,11 +12,19 @@
 }
 
 .background-container {
-  background-color: #A9D3FD;
+  background-color: #9AC0E6;
 }
 
 .bg-my-graydark {
-  background-color: #4D6073;
+  background-color: #A9D3FD;
+}
+
+.bg-my-graydark1 {
+  background-color: #9AC0E6;
+}
+
+.bg-my-graydark2 {
+  background-color: #7895B3;
 }
 
 .graydark-color {
