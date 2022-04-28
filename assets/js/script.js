@@ -9,6 +9,8 @@ var valores = 0;
 
 var userAmount = $('#userAmount');
 
+
+
 userAmount.on('keyup', () => {
 
     function totalValue (){
@@ -29,10 +31,6 @@ userAmount.on('keyup', () => {
     totalValue()
 
 })
-
-
-
-
 
 
 

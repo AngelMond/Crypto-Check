@@ -80,6 +80,11 @@
         margin-right: 5px;
     }
 
+    #headerCurrentPriceMxn{
+        flex-basis: 30%;
+        margin-right: 5px;
+    }
+
     #enterAmountHeader{
         flex-basis: 30%;
         margin-right: 5px;
@@ -91,6 +96,10 @@
     }
 
     #selectCrypto{
+        flex-basis: 45%;
+    }
+
+    #currentPriceMxn{
         flex-basis: 45%;
     }
 
@@ -128,6 +137,11 @@
     }
 
     #headerCurrentPrice{
+        flex-basis: 40%;
+        margin-right: 5px;
+    }
+
+    #headerCurrentPriceMxn{
         flex-basis: 40%;
         margin-right: 5px;
     }
@@ -196,6 +210,12 @@
     }
 
     #currentPrice{
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #currentPriceMxn{
         flex-basis: 100%;
         margin: 0 auto;
         text-align: center;
