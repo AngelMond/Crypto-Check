@@ -4,7 +4,7 @@ const selectCryptoAlert = $('#selectCryptoAlert');
 
 //Select tag to display the current crypto value
 let currentPrice = $('#currentPrice');
-var valores = 0;
+var values = 0;
 
 //Select the input to enter the user amount
 let userAmount = $('#userAmount');
@@ -22,25 +22,32 @@ var conversionDolarToMxn = " ";
 //Button to close the modal
 let modalButton = $('#modalButton');
 
+//Select divs to show the info when user add a crypto
+let dateCoinAdded = $('#dateCoinAdded');
+let cryptoCoinAdded = $('#cryptoCoinAdded');
+let priceAdded = $('#priceAdded');
 
 
-
+//Event to update automatically the price given for the user in the input- Enter the amount of your actual crypto coins
 userAmount.on('keyup', () => {
 
          if (userAmount.val() >= 0){
 
-         var prueba = userAmount.val();
+         var userNumber = userAmount.val();
          investValue.html(' ');
-         investValue.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(prueba*valores));
-         console.log(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(valores));
-        //  console.log(valores);
+         investValue.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(userNumber*values));
+         
+        //  console.log(values);
      } else {
 
+        //Display the modal if condition pass to the else 
          modalForInvalidNumber.removeClass('hidden');
+
+        //Event to hide the modal
          modalButton.on('click', ()=>{
              modalForInvalidNumber.addClass('hidden');
              userAmount.val('');
-            //  console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(valores));
+            //  console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(values));
          })
          }
     
@@ -53,11 +60,11 @@ function displayValue (){
     selectCrypto.change(function(){
         userAmount.val('');
         investValue.html('$0.00')
-        valores = selectCrypto.val();
+        values = selectCrypto.val();
         currentPrice.html('');
-        currentPrice.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(valores));
+        currentPrice.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(values));
         mexicanPesos.html(' ')
-        mexicanPesos.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'MXN' }).format(conversionDolarToMxn*valores));
+        mexicanPesos.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'MXN' }).format(conversionDolarToMxn*values));
     });
 };
 
@@ -79,11 +86,8 @@ getCurrency()
         return response.json();
     })
     .then((data) => {
-        console.log(data.new_amount);
         conversionDolarToMxn = data.new_amount;
         // mexicanPesos.append(conversionDolarToMxn);
-
-        console.log(currentPrice);
     });
 
 fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
