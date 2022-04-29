@@ -72,6 +72,13 @@ input[type="email"] {
   font-weight: 500;
 }
 
+.showCoinAdded {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+  text-align: center;
+}
+
 @media (max-width: 1081px) {
   #section1 {
     -ms-flex-preferred-size: 100%;

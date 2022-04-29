@@ -97,23 +97,18 @@
                         
 
                         <!--Button to add coin-->
-                        <input type="submit" id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 rounded-lg mb-3">
+                        <div id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 text-center rounded-lg mb-3 border-2 border-gray-200 hover:cursor-pointer"> Add coin</div>
 
                         <!--Display the coin added-->
-                        <div id="containerAddedCoin" class="basis-10/12 mb-3 text-left pl-10 font-color-bluedark">Cryptos added:  <span id="addedCrypto"></span></div>
+                        <div id="containerAddedCoin" class="flex basis-full mb-3 text-center mt-5 justify-center font-color-bluedark border-2 border-slate-400" >  
+                            
+                            <section id="dateCoinAdded" class="showCoinAdded border-2 border-slate-100">Date</section>
+                            <section id="cryptoCoinAdded" class="showCoinAdded  border-2 border-slate-100">Crypto</section>
+                            <section id="priceAdded" class="showCoinAdded border-2 border-slate-100">Price</section>
+                            
+                        </div>
 
-                        <!--Inputs to set alerts-->
-                        <label for="above" id="textAlertAbove" class="basis-3/12 mb-2.5 pr-1.5 text-right font-color-bluedark ">Above:</label>
-                        <input type="text" id="inputPriceAbove" placeholder="Price above than" class="basis-8/12 mb-2.5 rounded">
                         
-                        <label for="under" id="textAlertUnder" class="basis-3/12 mb-2.5 pr-1.5 text-right font-color-bluedark">Under:</label>
-                        <input type="text" id="inputPriceUnder" placeholder="Price under than" class="basis-8/12 mb-2.5 rounded">
-
-                        <label for="email" id="textEmail" class="basis-3/12 mt-5n pr-1.5 mb-1.5 text-right font-color-bluedark">Email:</label>
-                        <input type="email" id="inputEmail" placeholder="Your email " class="basis-8/12 rounded  ">
-
-                        <!--Button to set alert-->
-                        <input type="submit" id="sendButton" value="Set Alert" class="basis-3/12 mt-3 rounded-lg justify-self-center">
                     </form>
                 </section>
 

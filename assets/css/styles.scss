@@ -71,6 +71,11 @@
       font-weight: 500;
   }
   
+.showCoinAdded{
+    flex: 0 0 32%;
+    text-align: center;
+}
+
 @media(max-width:1081px){
     #section1{
         flex-basis: 100%;
