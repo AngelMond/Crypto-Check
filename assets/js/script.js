@@ -30,16 +30,17 @@ userAmount.on('keyup', () => {
          if (userAmount.val() >= 0){
 
          var prueba = userAmount.val();
-         investValue.html('$');
-         investValue.append(prueba*valores);
-         console.log(valores);
+         investValue.html(' ');
+         investValue.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(prueba*valores));
+         console.log(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(valores));
+        //  console.log(valores);
      } else {
 
          modalForInvalidNumber.removeClass('hidden');
          modalButton.on('click', ()=>{
              modalForInvalidNumber.addClass('hidden');
              userAmount.val('');
-             console.log(valores);
+            //  console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(valores));
          })
          }
     
@@ -53,10 +54,10 @@ function displayValue (){
         userAmount.val('');
         investValue.html('$0.00')
         valores = selectCrypto.val();
-        currentPrice.html('$');
-        currentPrice.append(valores);
-        mexicanPesos.html('$')
-        mexicanPesos.append(conversionDolarToMxn*valores);
+        currentPrice.html('');
+        currentPrice.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(valores));
+        mexicanPesos.html(' ')
+        mexicanPesos.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'MXN' }).format(conversionDolarToMxn*valores));
     });
 };
 
