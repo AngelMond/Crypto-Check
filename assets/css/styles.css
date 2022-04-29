@@ -2,6 +2,12 @@
   --font-color-bluedark: #264666;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* OUR OWN CLASSES */
 .font-color-bluedark {
   color: var(--font-color-bluedark);
