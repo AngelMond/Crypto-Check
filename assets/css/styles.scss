@@ -66,14 +66,16 @@
     box-shadow: 0px 0px 5px  #59A4F0 inset;
   }
 
-  #textSelectCrypto{
-      color: #4D6073;
-      font-weight: 500;
-  }
   
 .showCoinAdded{
-    flex: 0 0 32%;
+    flex: 0 0 30%;
     text-align: center;
+}
+
+#followedCryptos{
+    flex-basis: 90%;
+    padding: 2px;
+    margin-bottom: 5px;
 }
 
 @media(max-width:1081px){

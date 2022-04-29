@@ -37,7 +37,7 @@
                 lg:basis-5/12">
                 
                     
-                    <h2 id="h2Section1" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the current value of your invest</h2>
+                    <h2 id="h2Section1" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the value of your invest</h2>
 
                     <!--Form to check the price-->
                     <form id="coinValueForm" class="flex flex-row flex-wrap basis-full">
@@ -45,7 +45,7 @@
                         
                         <label id="cryptoSelectHeader" class="mb-2.5 lg:basis-5/12 text-right pr-1 font-color-bluedark " >Select your crypto</label>
                         <!--Dropdown Cryptos-->
-                        <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4">\
+                        <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4 hover:cursor-pointer">\
                         <option value=" ">Crypto</option>
                             
                         </select>
@@ -85,31 +85,58 @@
                 sm:basis-11/12
                 lg:basis-5/12">
 
-                    <h2 id="h2Section2" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Set an alert for a maximum or minimum price</h2>
+                    <h2 id="h2Section2" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Follow a crypto</h2>
 
                     <!--Form for alerts-->
-                    <form action="" class="flex flex-row flex-wrap justify-center">
+                    <div class="flex flex-row flex-wrap justify-center">
 
                         <label for="selectCrypto" id="textSelectCrypto" class="basis-4/12 justify-self-start font-color-bluedark">Select your Crypto</label>
 
                         <!--Dropdown Cryptos-->
-                        <select name="selectCrypto" id="selectCryptoAlert" class="basis-4/12 mb-3 rounded"></select>
+                        <select id="selectCryptoAlert" class="basis-4/12 mb-3 rounded text-center hover:cursor-pointer">
+                            
+                        </select>
                         
 
                         <!--Button to add coin-->
-                        <div id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 text-center rounded-lg mb-3 border-2 border-gray-200 hover:cursor-pointer"> Add coin</div>
+                        <div id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 text-center rounded-lg mb-3 border-2 border-gray-200 hover:cursor-pointer"> Follow</div>
 
                         <!--Display the coin added-->
-                        <div id="containerAddedCoin" class="flex basis-full mb-3 text-center mt-5 justify-center font-color-bluedark border-2 border-slate-400" >  
+                        <div id="containerAddedCoin" class="flex flex-wrap basis-full overflow-hidden mb-3 text-center mt-5 justify-center font-color-bluedark " >  
                             
-                            <section id="dateCoinAdded" class="showCoinAdded border-2 border-slate-100">Date</section>
-                            <section id="cryptoCoinAdded" class="showCoinAdded  border-2 border-slate-100">Crypto</section>
-                            <section id="priceAdded" class="showCoinAdded border-2 border-slate-100">Price</section>
+                            <!--Header Followed Cryptos-->
+                            <h3 id="followedCryptos" class=" text-xl border-b-2 border-slate-500 ">Followed Cryptos</h3>
+
+                           
+
+                            <!--Display the selected Crypto-->
+                            <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500 rounded-l-lg">
+
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Crypto</h4> 
+                                <div id="cryptoCoinAdded" class="basis-full flex flex-row flex-wrap my-2"></div>  
+
+                            </section>
+
+                            <!--Display the price for the cryto-->
+                            <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500">
+
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Price</h4> 
+                                <div id="priceAdded" class="basis-full flex flex-row flex-wrap my-2"></div>  
+
+                            </section>
+
+                             <!--Display the date-->
+                             <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500 rounded-r-lg" >
+
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Date</h4>  
+                                <div id="dateCoinAdded" class="basis-full flex flex-row flex-wrap my-2"></div>  
+ 
+                             </section>
                             
                         </div>
 
                         
-                    </form>
+                    </div>
                 </section>
 
                 <!-- Main modal -->
@@ -151,7 +178,7 @@
   
   
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
     <script src="assets/js/script.js"></script>
 </body>

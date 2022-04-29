@@ -10,7 +10,7 @@ var values = 0;
 let userAmount = $('#userAmount');
 
 //Select the modal
-let modalForInvalidNumber = $('#defaultModal')
+let modalForInvalidNumber = $('#defaultModal');
 
 //Select span to append the invest value
 let investValue = $('#investValue');
@@ -27,6 +27,8 @@ let dateCoinAdded = $('#dateCoinAdded');
 let cryptoCoinAdded = $('#cryptoCoinAdded');
 let priceAdded = $('#priceAdded');
 
+//Button to add a crypto
+let addCoin = $('#addCoin');
 
 //Event to update automatically the price given for the user in the input- Enter the amount of your actual crypto coins
 userAmount.on('keyup', () => {
@@ -95,6 +97,7 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 
 .then(data => {
 
+    //Set crypto values for card 1
     data.forEach(token => {
        
         var optionElement = $('<option>');
@@ -105,13 +108,15 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
         selectCrypto.append(optionElement);
     });
 
+    //Set crypto values for card 2
     data.forEach(token => {
 
         var optionElement = $('<option>');
         optionElement.html(token.name);
+        optionElement.attr('value', token.current_price);
+        optionElement.attr('name', token.name);
         selectCryptoAlert.append(optionElement);
         
-
     });
 
     displayValue ();
@@ -121,3 +126,55 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 
 
 
+function displayTime (){
+
+    var spanElement = $('<span>');
+
+    var date = moment().format('l');
+
+    console.log(date);
+    spanElement.append(date);
+    spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100');
+    dateCoinAdded.append(spanElement);
+     
+}
+
+
+//Function to display the Name of the crypto
+function displayCryptoName(){
+    var spanElement = $('<span>');
+    
+
+    let selectValue = $('#selectCryptoAlert').val();
+    //Grab the name of every crypto 
+    var coinName = $('#selectCryptoAlert option[value="' + selectValue + '"]').html();
+    spanElement.append(coinName);
+    spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100');
+    cryptoCoinAdded.append(spanElement);
+
+}
+
+
+
+//Function to display the price
+function displayPriceAdded(){
+
+        var spanElement = $('<span>');
+
+        //Select the value of the crypto
+        cryptoValue = selectCryptoAlert.val();
+
+        spanElement.append("$" + cryptoValue)
+        spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100')
+        priceAdded.append(spanElement)
+}
+
+
+
+//Function to add a crypto
+
+addCoin.on('click', () =>{
+    displayTime();
+    displayCryptoName();
+    displayPriceAdded();
+})
