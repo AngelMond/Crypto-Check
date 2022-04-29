@@ -129,12 +129,16 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 function displayTime (){
 
     var spanElement = $('<span>');
-
     var date = moment().format('l');
-    console.log(date);
+
     spanElement.append(date);
     spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100');
     dateCoinAdded.append(spanElement);
+
+   localStorage.setItem('date', date);
+   localStorage.getItem('date')
+
+   
 }
 
 
@@ -150,6 +154,9 @@ function displayCryptoName(){
     spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100');
     cryptoCoinAdded.append(spanElement);
 
+    localStorage.setItem('crypto', coinName);
+    localStorage.getItem('crypto')
+
 }
 
 
@@ -160,10 +167,14 @@ function displayPriceAdded(){
         var spanElement = $('<span>');
 
         //Select the value of the crypto
-        cryptoValue = selectCryptoAlert.val();
+        var cryptoValue = selectCryptoAlert.val();
         spanElement.append(new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(cryptoValue));
         spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100')
-        priceAdded.append(spanElement)
+        
+
+        localStorage.setItem('price', cryptoValue);
+        var getPrice = localStorage.getItem('price');
+        priceAdded.append(getPrice)
 }
 
 
