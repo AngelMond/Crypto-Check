@@ -9,6 +9,9 @@ How we decided to develop this project:
 
 * The feature that we have developed is related with Cryptocurencies, these are the user stories we want to resolve as part of this project.
 
+* Here is an example of the MVP proposal designs ![alt text](./assets/Images/Phase%201.png)
+
+* Heres is an image in case we are able to complete the MVP on time ![alt text](./assets/Images/Phase%202%20Design.png)
 
 
 # High Level User Stories used to start development
@@ -38,6 +41,7 @@ How we decided to develop this project:
 
 * As a user, I want the feature to be in blue color.
 
+* Some images of the final UI ![alt text](./assets/Images/Completed%20UI.JPG)
 
 
 
@@ -47,6 +51,11 @@ How we decided to develop this project:
 
 * As a user, I want the feature to store cryptocurrency values using local storage
 
+* Images of Cryptocurrency information pulled from coingecko API ![alt text](./assets/Images/Dropdown.JPG)
+
+* Selected Crypto token ![alt text](./assets/Images/Selected%20Crypto.JPG)
+
+* Investment amount shown ![alt text](./assets/Images/Investment%20amount.JPG)
 
 
 
@@ -56,7 +65,12 @@ How we decided to develop this project:
 
 * Be deployed to GitHub Pages. / this is the Repository URL of the project https://github.com/AngelMond/Proyect-1
 
-* Be interactive (i.e., accept and respond to user input). / covered in the following image
+* Be interactive (i.e., accept and respond to user input). / covered in the following images
+* Images of Cryptocurrency information pulled from coingecko API ![alt text](./assets/Images/Dropdown.JPG)
+
+* Selected Crypto token ![alt text](./assets/Images/Selected%20Crypto.JPG)
+
+* Investment amount shown ![alt text](./assets/Images/Investment%20amount.JPG)
 
 * Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources). / we used https://www.coingecko.com/en/api
 
