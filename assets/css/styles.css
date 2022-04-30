@@ -349,6 +349,11 @@ input[type="email"] {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
+  #inputAddName,
+  #inputAddPrice,
+  #inputAddDate {
+    font-size: 0.75rem;
+  }
 }
 
 /*
