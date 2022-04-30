@@ -31,18 +31,6 @@ let priceAdded = $('#priceAdded');
 let addCoin = $('#addCoin');
 
 
-//Tags to store the added cryptos
-var cryptoName1 = $('.cryptoName1');
-var cryptoName2 = $('.cryptoName2');
-var cryptoName3 = $('.cryptoName3');
-
-var cryptoPrice1 = $('.cryptoPrice1');
-var cryptoName2 = $('.cryptoName2');
-var cryptoName3 = $('.cryptoName3');
-
-var cryptoDate1 = $('.cryptoDate1');
-var cryptoName2 = $('.cryptoName2');
-var cryptoName3 = $('.cryptoName3');
 
 //Event to update automatically the price given for the user in the input- Enter the amount of your actual crypto coins
 userAmount.on('keyup', () => {
@@ -139,73 +127,70 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
 .catch(err => console.log(err));
 
 
+//My inputs to add coins
+var inputAddName = $("#inputAddName");
+var inputAddPrice = $("#inputAddPrice");
+var inputAddDate = $("#inputAddDate");
 
 
 
 //Function to display the Name for the followed crypto
 function displayCryptoName(){
 
-    
-   
     let selectValue = $('#selectCryptoAlert').val();
 
-    //Variable to Grab the name of every crypto 
+    //Variable stores the name of every crypto 
     var coinName = $('#selectCryptoAlert option[value="' + selectValue + '"]').html();
 
-    //Set values to local storage
+    //Set Crypto Name to local storage
     localStorage.setItem('crypto', coinName);
-    var localCryptoName = localStorage.getItem('crypto')
-
-    
-    cryptoName1.append(localCryptoName);
-    
-
+    inputAddName.val(coinName);
     
 }
+
+
+     //Get the Crypto Name from local storage and set it to web
+    var localCryptoName = localStorage.getItem('crypto')
+    inputAddName.val(localCryptoName);
+
 
 
 
 //Function to display the price for the followed crypto
 function displayPriceAdded(){
 
-        
-
         //Variable stores the value of the crypto
         var cryptoValue = selectCryptoAlert.val();
         var priceFormated = (new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' }).format(cryptoValue));
         
-        //Set values to local storage
+        //Set Crypto price to local storage
         localStorage.setItem('price', priceFormated);
-        var localCryptoPrice = localStorage.getItem('price');
-
-
-        cryptoPrice1.append(localCryptoPrice);
-       
-
-
-        
+        inputAddPrice.val(priceFormated);
 }
+
+
+
+     //Get the price from local storage and set it to web
+    var localCryptoPrice = localStorage.getItem('price');
+    inputAddPrice.val(localCryptoPrice);
+
+
 
 
 //Function to display the date for the followed crypto
 function displayTime (){
 
-    var spanElement = $('<span>');
-    //Varaible stores the time
+    //Variable to store the date
     var date = moment().format('l');
 
-    //Set values to local storage
+    //Set date to local storage
     localStorage.setItem('date', date);
-    var localDate = localStorage.getItem('date')
-    
-    
-    cryptoDate1.append(localDate);
-    
-
-   //Styles for span with tailwind
-   spanElement.addClass('basis-full mt-1 border-b-2 border-slate-100');
+    inputAddDate.val(date);
 }
 
+    //Get the date from local storage and set it to web
+    var localDate = localStorage.getItem('date')
+    inputAddDate.val(localDate);
 
 
 //Event to follow a crypto
@@ -214,3 +199,5 @@ addCoin.on('click', () =>{
     displayPriceAdded();
     displayTime();
 })
+
+

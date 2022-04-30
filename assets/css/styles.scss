@@ -72,11 +72,24 @@
     text-align: center;
 }
 
+//THIS IS MY H3
 #followedCryptos{
     flex-basis: 90%;
     padding: 2px;
     margin-bottom: 5px;
 }
+
+//My inputs to add cryptos
+#inputAddName,
+#inputAddPrice,
+#inputAddDate{
+    width: 80%;
+    background-color: #A9D3FD;
+    text-align: center;
+    outline: none;
+}
+
+
 
 @media(max-width:1081px){
     #section1{

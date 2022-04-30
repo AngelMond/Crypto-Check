@@ -81,6 +81,15 @@ input[type="email"] {
   margin-bottom: 5px;
 }
 
+#inputAddName,
+#inputAddPrice,
+#inputAddDate {
+  width: 80%;
+  background-color: #A9D3FD;
+  text-align: center;
+  outline: none;
+}
+
 @media (max-width: 1081px) {
   #section1 {
     -ms-flex-preferred-size: 100%;
