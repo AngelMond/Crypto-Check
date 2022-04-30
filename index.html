@@ -8,62 +8,182 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+       
 </head>
-<body class="flex flex-wrap justify-center items-center bg-slate-100" >
+
+<body class="flex flex-wrap justify-center items-center bg-slate-100 graydark-color" >
 
     
-
-        <div class="w-9/12 flex flex-col flex-wrap p-5 border-2 border-slate-300 shadow-2xl shadow-slate-400 rounded-lg" >
+        <!--Container for header, main and footer-->
+        <div id="mainContainer" class="w-9/12 flex flex-col flex-wrap background-container p-5 border-2 border-slate-300 shadow-2xl shadow-slate-400 rounded-lg 
+        sm: w-11/12
+        sm:p-2
+        sm:p-2
+        lg:w-11/12" >
             
-            <header class="flex flex-row flex-wrap justify-center">
-
-                <h1 class="basis-full text-center text-4xl font-sans ">
-                    Crypto Check
-                </h1>
-                <span class="basis-full text-center my-4">Check the today's value of your invest</span>
+            <!--Header-->
+            <header class="flex flex-row flex-wrap justify-center mb-8 mt-9 p-3 w-12/12">
+                <h1 class="basis-full text-center text-6xl font-sans font-semibold"> Crypto Check </h1>
             </header>
         
-        
-            <main class="w-full flex flex-row flex-wrap">
+            
+            <!--Main content-->
+            <main  class="w-full flex flex-row flex-wrap justify-center
+            sm:w-full">
               
-                <section class="basis-6/12 text-center">
+                <!--First Section-->
+                <section id="section1" class="m-5 basis-5/12 text-center p-4 border-2 my-border-color rounded-lg shadow-2xl box-shadow-graydark bg-my-graydark
+                sm:basis-11/12
+                lg:basis-5/12">
+                
+                    
+                    <h2 id="h2Section1" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Check the value of your invest</h2>
 
-                    <form action="" class="flex flex-row flex-wrap">
-
-                        <label for="select" class="basis-6/12 mb-2.5">Select your Crypto</label>
-                        <select name="selectCrypto" id="selectCrypto" class="basis-6/12 mb-2.5">
-                            <option id="bitcoin" value="Bitcoin">Bitcoin</option>
-                            <option id="hetherum" value="Hetherum">Hetherum</option>
-                            <option id="binanceCoin" value="BinanceCoin">Binance Coin</option>
+                    <!--Form to check the price-->
+                    <form id="coinValueForm" class="flex flex-row flex-wrap basis-full">
+                        <label id="cryptoSelectHeader" class="mb-2.5 lg:basis-5/12 text-right pr-1 font-color-bluedark " >Select your crypto</label>
+                        <!--Dropdown Cryptos-->
+                        <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4 hover:cursor-pointer">\
+                        <option value=" ">Crypto</option>
+                            
                         </select>
+
+                        <span id="headerCurrentPrice"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-color-bluedark ">Current price in USD</span>
                         
-                        <label for="enterAmount" class="basis-6/12 mb-2.5">Enter the amount of your acctual invest</label>
-                        <input type="text" placeholder="0.00" class="basis-6/12 mb-2.5">
+                        <!--Here goes the code from the cryptos current price-->
+                        <span id="currentPrice" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> $0.00 </span>
+
+
+                        <!--Display price in mexican pesos-->
+                        <span id="headerCurrentPriceMxn"  class="mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-color-bluedark">Current price in MXN</span>
+                        
+                        <!-- Append to this span-->
+                        <span id="currentPriceMxn" class="basis-5/12 text-left lg:mt-3 text-center mb-2.5 lg:ml-4 font-semibold"> $0.00  </span>
+
+                        <!--Enter users invest-->
+                        <label id="enterAmountHeader" for="enterAmount" class=" basis-5/12 mb-2.5 text-right pr-1.5 lg:mt-3 lg:basis-5/12 lg:mr-2 font-color-bluedark">Enter the amount of your actual crypto coins</label>
+                        <input id="userAmount" type="number" placeholder="0.00" class="overflow-hidden text-center basis-5/12 mb-2.5 rounded lg:2/12 lg:ml-2 lg:mt-3">
+
+
+                        <span id="headerInvestValue" class="basis-6/12 mb-2.5 lg:mt-3 font-color-bluedark">This is the value of your invest: </span>
+                        
+                        <!--This span will Display the users invest value-->
+                        <span id="investValue" class="overflow-hidden basis-3/12 mb-2.5 font-semibold text-left lg:mt-3 text-center  lg:ml-4 ">$0.00</span>
                     </form>
 
-                </section>
-                <section class="basis-6/12 text-center">alert
-                            <!--mod-->
 
-                            <!-- Mario -->
+                    <div class="crypto">
 
+                    </div>
                 </section>
+
+                
+                <!--Second Section-->
+                <section id="section2" class="basisSections m-5 basis-5/12 text-center p-4 border-2 my-border-color rounded-lg shadow-2xl box-shadow-graydark bg-my-graydark
+                sm:basis-11/12
+                lg:basis-5/12">
+
+                    <h2 id="h2Section2" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Follow a crypto</h2>
+
+                    <!--Form for alerts-->
+                    <div class="flex flex-row flex-wrap justify-center">
+
+                        <label for="selectCrypto" id="textSelectCrypto" class="basis-4/12 justify-self-start font-color-bluedark">Select your Crypto</label>
+
+                        <!--Dropdown Cryptos-->
+                        <select id="selectCryptoAlert" class="basis-4/12 mb-3 rounded text-center hover:cursor-pointer">
+                            
+                        </select>
+                        
+
+                        <!--Button to add coin-->
+                        <div id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 text-center rounded-lg mb-3 border-2 border-gray-200 hover:cursor-pointer"> Follow</div>
+
+                        <!--Container to Add Coins-->
+                        <div id="containerAddedCoin" class="flex flex-wrap basis-full overflow-hidden mb-3 text-center mt-5 justify-center font-color-bluedark " >  
+                            
+                            <!--Header Followed Cryptos-->
+                            <h3 id="followedCryptos" class=" text-xl  ">Followed Crypto</h3>
+
+            
+                            <!--Display the name of the selected Crypto-->
+                            <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500 rounded-l-lg">
+
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Crypto</h4> 
+                                <div id="cryptoCoinAdded" class="basis-full flex flex-row justify-center flex-wrap my-2">
+                                    <input id="inputAddName">
+                                </div>
+                                    
+                            </section>
+
+                            <!--Display the price for the cryto-->
+                            <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500">
+
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Price</h4> 
+                                <div id="priceAdded" class="basis-full flex flex-row justify-center flex-wrap my-2">
+                                    <input id="inputAddPrice">
+                                </div> 
+                                    
+                            </section>
+
+                             <!--Display the date-->
+                             <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500 rounded-r-lg" >
+
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Date</h4>  
+                                <div id="dateCoinAdded" class="basis-full flex flex-row flex-wrap justify-center my-2">
+                                    <input id="inputAddDate"> 
+                                </div>
+
+                             </section>
+                            
+                        </div>
+
+                        
+                    </div>
+                </section>
+
+                <!-- Main modal -->
+                <div id="defaultModal" tabindex="-1"  class="flex justify-center hidden flex-wrap fixed top-0 left-0  right-0 z-50  w-full overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full max-w-2xl p-4 ">
+                        <!-- Modal content -->
+                        <div class="flex flex-col justify-center items-center relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="basis-12/12 flex flex-wrap flex-row p-4 border-b rounded-t dark:border-gray-600">
+                                <h3 class="text-xl font-semibold text-center text-gray-900 dark:text-white">
+                                    Please enter a number greater than "0"
+                                </h3>
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="basis-12/12 flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                <button id="modalButton" data-modal-toggle="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 tracking-widest">Ok!</button> 
+                            </div>
+                        </div>
+                    </div>
+             </div>
+                
+
             </main>
-        <!--mod2-->
         
         
-            <footer>    
-                <div>Modificacion</div>
+            <!--Footer-->
+            <footer class="flex flex-row flex-wrap justify-center mt-12">    
+                <div id="footerDiv" class="basis-1/4 p-4 border-t-2 border-slate-100 text-center font-sans text-xl font-semibold sm:basis-1/2">Designed by BesTEAM </div>
             </footer>
         </div>
 
-    
-    
-    
-    
 
 
+
+
+        
+
+  
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
