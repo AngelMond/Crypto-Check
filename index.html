@@ -45,7 +45,6 @@
                         <!--Dropdown Cryptos-->
                         <select name="selectCrypto" id="selectCrypto"  class="basis-4/12 mb-2.5 rounded text-center lg:basis-5/12 lg:ml-4 hover:cursor-pointer">\
                         <option value=" ">Crypto</option>
-                            
                         </select>
 
                         <span id="headerCurrentPrice"  class=" mb-2.5 lg:basis-5/12 text-right pr-1 lg:mt-3 font-color-bluedark ">Current price in USD</span>
@@ -69,12 +68,9 @@
                         
                         <!--This span will Display the users invest value-->
                         <span id="investValue" class="overflow-hidden basis-3/12 mb-2.5 font-semibold text-left lg:mt-3 text-center  lg:ml-4 ">$0.00</span>
+
                     </form>
 
-
-                    <div class="crypto">
-
-                    </div>
                 </section>
 
                 
@@ -85,17 +81,15 @@
 
                     <h2 id="h2Section2" class="basis-full  text-center font-sans text-3xl font-semibold mb-5 pb-2 border-b-2 border-slate-100">Follow a crypto</h2>
 
-                    <!--Form for alerts-->
+                    <!--Cointainer for follow crypto-->
                     <div class="flex flex-row flex-wrap justify-center">
 
                         <label for="selectCrypto" id="textSelectCrypto" class="basis-4/12 justify-self-start font-color-bluedark">Select your Crypto</label>
 
                         <!--Dropdown Cryptos-->
-                        <select id="selectCryptoAlert" class="basis-4/12 mb-3 rounded text-center hover:cursor-pointer">
-                            
-                        </select>
-                        
-
+                        <select id="selectCryptoAlert" class="basis-4/12 mb-3 rounded text-center hover:cursor-pointer"></select>
+                
+    
                         <!--Button to add coin-->
                         <div id="addCoin" value="Add Coin" class="basis-2/12 ml-1.5 text-center rounded-lg mb-3 border-2 border-gray-200 hover:cursor-pointer"> Follow</div>
 
@@ -105,11 +99,12 @@
                             <!--Header Followed Cryptos-->
                             <h3 id="followedCryptos" class=" text-xl  ">Followed Crypto</h3>
 
-            
+
                             <!--Display the name of the selected Crypto-->
                             <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500 rounded-l-lg">
 
                                 <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Crypto</h4> 
+
                                 <div id="cryptoCoinAdded" class="basis-full flex flex-row justify-center flex-wrap my-2">
                                     <input id="inputAddName">
                                 </div>
@@ -120,6 +115,7 @@
                             <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500">
 
                                 <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Price</h4> 
+
                                 <div id="priceAdded" class="basis-full flex flex-row justify-center flex-wrap my-2">
                                     <input id="inputAddPrice">
                                 </div> 
@@ -129,7 +125,8 @@
                              <!--Display the date-->
                              <section  class="showCoinAdded  flex flex-row flex-wrap justify-center border-2 border-slate-500 rounded-r-lg" >
 
-                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Date</h4>  
+                                <h4 class="basis-full p-2 my-1 border-b-2 border-slate-500">Date</h4> 
+
                                 <div id="dateCoinAdded" class="basis-full flex flex-row flex-wrap justify-center my-2">
                                     <input id="inputAddDate"> 
                                 </div>
@@ -138,8 +135,8 @@
                             
                         </div>
 
-                        
                     </div>
+
                 </section>
 
                 <!-- Main modal -->
@@ -173,14 +170,7 @@
         </div>
 
 
-
-
-
         
-
-  
-  
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
     <script src="assets/js/script.js"></script>
