@@ -72,27 +72,27 @@ function displayValue (){
     });
 };
 
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Host': 'currency-converter-by-api-ninjas.p.rapidapi.com',
-        'X-RapidAPI-Key': '6c37f3f275msh7913bbd983d34f5p1e0db5jsn3a74ed99c007'
-    }
-};
-function getCurrency() {
-    return fetch(
-        "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=USD&want=MXN&amount=1",
-        options
-    );
-}
-getCurrency()
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        conversionDolarToMxn = data.new_amount;
-        // mexicanPesos.append(conversionDolarToMxn);
-    });
+// const options = {
+//     method: 'GET',
+//     headers: {
+//         'X-RapidAPI-Host': 'currency-converter-by-api-ninjas.p.rapidapi.com',
+//         'X-RapidAPI-Key': '6c37f3f275msh7913bbd983d34f5p1e0db5jsn3a74ed99c007'
+//     }
+// };
+// function getCurrency() {
+//     return fetch(
+//         "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=USD&want=MXN&amount=1",
+//         options
+//     );
+// }
+// getCurrency()
+//     .then((response) => {
+//         return response.json();
+//     })
+//     .then((data) => {
+//         conversionDolarToMxn = data.new_amount;
+//         // mexicanPesos.append(conversionDolarToMxn);
+//     });
 
 fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
 .then(res => res.json())
