@@ -1,4 +1,4 @@
-# Team-Proyect-1
+# Crypto Check
 
 How we decided to develop this project:
 * Each of the team members came with a project proposal, after some discussions and conversations about each of the poposal we decided by the most viable according to our current web development knowledge.
